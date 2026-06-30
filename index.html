@@ -6,9 +6,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Orari di Apertura</title>
+    <title>Home Page</title>
 
-    <link rel="stylesheet" href="css/Style_Orario.css?v=1.1">
+    <link rel="stylesheet" href="css/Style_Orario.css">
 
 </head>
 
@@ -16,8 +16,8 @@
 
     <nav class="navbar-principale">
         <div class="menu-container">
-            <button class="btn-menu" onclick="window.location.href='homePage.html'">Home</button>
-            <button class="btn-menu active" onclick="window.location.href='index.html'">Orari</button>
+            <button class="btn-menu active" onclick="window.location.href='index.html'">Home</button>
+            <button class="btn-menu" onclick="window.location.href='orari.html'">Orari</button>
             <button class="btn-menu" onclick="window.location.href='storia.html'">Chi Siamo</button>
             <button class="btn-menu" onclick="window.location.href='doveSiamo.html'">Dove Siamo</button>
         </div>
@@ -29,77 +29,41 @@
             <img src="assets/immagini/logo_piccolo.png">
         </div>
 
-        <div id="statusBanner" class="status-banner">
-            <div id="statusText" class="status-text">Controllo orario...</div>
-            <div id="countdownText" class="countdown-text">Attendere prego...</div>
+        <div class="status-banner" style="background: rgba(15, 6, 70, 0.95) !important;">
+            <div class="status-text" style="font-size: 18px;">BENVENUTI</div>
         </div>
 
-        <div class="timetable">
+        <div class="timetable" style="padding: 25px 20px; text-align: center;">
 
-            <div class="day-block" id="day-1">
-                <span class="day-name">Lunedì</span>
-                <div class="hours-container">
-                    <span class="hours-block">Mattina: 07:30 - 12:50</span>
-                    <span class="hours-block">Pome: 16:00 - 19:30</span>
-                </div>
+            <h1
+                style="color: #0f0646; font-size: 22px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 12px;">
+                Il Nostro Mondo
+            </h1>
+
+            <p style="font-style: italic; color: #232222; font-size: 17px; line-height: 1.6; margin-bottom: 25px;">
+                "Passione, cura e tradizione<br>
+                al vostro servizio ogni giorno."
+            </p>
+
+            <div style="width: 50px; height: 2px; background-color: #0f0646; margin: 0 auto 25px auto; opacity: 0.2;">
             </div>
 
-            <div class="day-block" id="day-2">
-                <span class="day-name">Martedì</span>
-                <div class="hours-container">
-                    <span class="hours-block">Mattina: 07:30 - 12:50</span>
-                    <span class="hours-block">Pome: 16:00 - 19:30</span>
-                </div>
-            </div>
+            <div style="display: flex; flex-direction: column; gap: 14px; max-width: 260px; margin: 0 auto;">
 
-            <div class="day-block" id="day-3">
-                <span class="day-name">Mercoledì</span>
-                <div class="hours-container">
-                    <span class="hours-block">Mattina: 07:30 - 12:50</span>
-                    <span class="hours-block">Pome: 16:00 - 19:30</span>
-                </div>
-            </div>
+                <button class="btn-home-esclusivo" onclick="window.location.href='prodotti.html'">
+                    I Nostri Prodotti
+                </button>
 
-            <div class="day-block" id="day-4">
-                <span class="day-name">Giovedì</span>
-                <div class="hours-container">
-                    <span class="hours-block">Mattina: 07:30 - 12:50</span>
-                    <span class="hours-block">Pome: 16:00 - 19:30</span>
-                </div>
-            </div>
+                <button class="btn-home-esclusivo" onclick="window.location.href='ricette.html'">
+                    Le Nostre Ricette
+                </button>
 
-            <div class="day-block" id="day-5">
-                <span class="day-name">Venerdì</span>
-                <div class="hours-container">
-                    <span class="hours-block">Mattina: 07:30 - 12:50</span>
-                    <span class="hours-block">Pome: 16:00 - 19:30</span>
-                </div>
-            </div>
-
-            <div class="day-block" id="day-6">
-                <span class="day-name">Sabato</span>
-                <div class="hours-container">
-                    <span class="hours-block">Mattina: 07:30 - 12:50</span>
-                    <span class="closed-text">Pomeriggio Chiuso</span>
-                </div>
-            </div>
-
-            <div class="day-block" id="day-0" style="color: #e63946;">
-                <span class="day-name" style="color: #e63946;">Domenica &nbsp;&nbsp;<i>CHIUSO TUTTO IL GIORNO</i></span>
-                <!-- Modificato qui sotto per garantire una centratura perfetta e pulita -->
-                <div style="text-align: center; width: 100%; padding-top: 5px;">
-                    <span class="closed-text"
-                        style="color: #2e1719; font-weight: bold; font-size: 13px; display: inline-block;">
-                        Aperture e Chiusure Straordinarie non sono<br>nell'elenco ( l'orario può subire variazioni )
-                    </span>
-                </div>
             </div>
 
         </div>
 
     </div>
 
-    <script src="js/Js_Orario.js"></script>
 </body>
 
 </html>
