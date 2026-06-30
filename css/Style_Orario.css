@@ -325,11 +325,14 @@ button:active {
 /* ========================================== */
 
 /* Modifica al body quando visualizza le pagine con testo lungo (storia) per non farle volare al centro */
+/* Modifica al body quando visualizza le pagine con testo lungo (storia) per non farle volare al centro */
 body {
     flex-direction: column !important;
     /* Dispone menu e card in verticale, uno sotto l'altro */
     justify-content: flex-start !important;
     /* Allinea tutto partendo dall'alto della pagina */
+    align-items: center !important;
+    /* Forza il perfetto allineamento al centro di barra e card su mobile */
     padding-top: 20px;
 }
 
