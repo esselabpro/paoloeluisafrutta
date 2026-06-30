@@ -13,13 +13,22 @@
 </head>
 
 <body>
-	
+
+    <nav class="navbar-principale">
+        <div class="menu-container">
+            <button class="btn-menu" onclick="window.location.href='homePage.html'">Home</button>
+            <button class="btn-menu active" onclick="window.location.href='index.html'">Orari</button>
+            <button class="btn-menu" onclick="window.location.href='storia.html'">Chi Siamo</button>
+            <button class="btn-menu" onclick="window.location.href='doveSiamo.html'">Dove Siamo</button>
+        </div>
+    </nav>
+
     <div class="orari-card">
-	
-		<div class= "logo">
-			<img src="assets/immagini/logo_piccolo.png">
-		</div>
-	
+
+        <div class="logo">
+            <img src="assets/immagini/logo_piccolo.png">
+        </div>
+
         <div id="statusBanner" class="status-banner">
             <div id="statusText" class="status-text">Controllo orario...</div>
             <div id="countdownText" class="countdown-text">Attendere prego...</div>
@@ -79,18 +88,14 @@
                 <span class="day-name" style="color: #e63946;">Domenica &nbsp;&nbsp;<i>CHIUSO TUTTO IL GIORNO</i></span>
                 <!-- Modificato qui sotto per garantire una centratura perfetta e pulita -->
                 <div style="text-align: center; width: 100%; padding-top: 5px;">
-                    <span class="closed-text" style="color: #2e1719; font-weight: bold; font-size: 13px; display: inline-block;">
+                    <span class="closed-text"
+                        style="color: #2e1719; font-weight: bold; font-size: 13px; display: inline-block;">
                         Aperture e Chiusure Straordinarie non sono<br>nell'elenco ( l'orario può subire variazioni )
                     </span>
                 </div>
             </div>
 
         </div>
-        <center>
-            <button onclick="window.location.href='homePage.html'">clicca per entrare</button>
-            <br><br>
-        </center>
-
 
     </div>
 
