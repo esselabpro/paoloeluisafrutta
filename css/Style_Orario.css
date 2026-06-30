@@ -312,3 +312,67 @@ button:active {
         gap: 6px;
     }
 }
+
+/* ========================================== */
+/*  STILI AGGIUNTIVI PER HOME E LISTA RICETTE */
+/* ========================================== */
+
+/* I due pulsanti blu esclusivi della Home Page */
+.btn-home-esclusivo {
+    width: 100%;
+    background: #9b0293 !important;
+    color: white !important;
+    border-bottom: 3px solid rgba(10, 4, 54, 0.1);
+    /*border: none !important;*/
+    padding: 12px !important;
+    font-size: 14px !important;
+    border-radius: 8px !important;
+    transition: transform 0.2s ease, background-color 0.2s ease !important;
+}
+
+.btn-home-esclusivo:hover {
+    transform: translateY(-2px) !important;
+    background: #e407ca !important;
+    /* Si schiarisce leggermente al passaggio del mouse */
+}
+
+/* Gli elementi della lista nella pagina Ricette */
+.ricetta-item {
+    display: flex;
+    flex-direction: column;
+    padding: 14px 12px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+    border-radius: 8px;
+    margin-bottom: 8px;
+    text-align: left;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+    text-decoration: none;
+    /* Rimuove la sottolineatura dei link */
+}
+
+.ricetta-item:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+}
+
+.ricetta-item:hover {
+    background: rgba(15, 6, 70, 0.05);
+    transform: translateX(3px);
+    /* Piccola spinta a destra */
+}
+
+.ricetta-titolo {
+    font-weight: 800;
+    text-transform: uppercase;
+    font-size: 14px;
+    color: #0f0646;
+    margin-bottom: 4px;
+}
+
+.ricetta-descrizione {
+    font-size: 13px;
+    color: #555555;
+    font-style: italic;
+    line-height: 1.4;
+}

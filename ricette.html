@@ -1,0 +1,77 @@
+<!-- ATTENZIONE PAGINA PRIVATA - PROPRIETA' DI SFRISO PAOLO -->
+
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Le Nostre Ricette</title>
+
+    <link rel="stylesheet" href="css/Style_Orario.css">
+
+</head>
+
+<body>
+
+    <!-- NAVBAR IN ALTO (Fissa e pulita, nessuna voce attiva perché siamo in una sottopagina) -->
+    <nav class="navbar-principale">
+        <div class="menu-container">
+            <button class="btn-menu" onclick="window.location.href='homePage.html'">Home</button>
+            <button class="btn-menu" onclick="window.location.href='index.html'">Orari</button>
+            <button class="btn-menu" style="white-space: nowrap;" onclick="window.location.href='storia.html'">Chi
+                Siamo</button>
+            <button class="btn-menu" style="white-space: nowrap;" onclick="window.location.href='doveSiamo.html'">Dove
+                Siamo</button>
+        </div>
+    </nav>
+
+    <!-- CARD STRETTA CLONATA IN MODO IDENTICO -->
+    <div class="orari-card">
+
+        <!-- LOGO IDENTICO -->
+        <div class="logo">
+            <img src="assets/immagini/logo_piccolo.png">
+        </div>
+
+        <!-- BANNER BLU RIGIDO ED ELEGANTE -->
+        <div class="status-banner" style="background: rgba(15, 6, 70, 0.95) !important;">
+            <div class="status-text" style="font-size: 16px; letter-spacing: 1px;">LE RICETTE DI LUISA</div>
+        </div>
+
+        <!-- LISTA DELLE RICETTE (Struttura verticale simile agli orari) -->
+        <div class="timetable" style="padding: 15px 12px;">
+
+            <!-- RICETTA 1 -->
+            <a href="ricetta-arrosto.html" class="ricetta-item">
+                <span class="ricetta-titolo">Lasagne della Domenica</span>
+                <span class="ricetta-descrizione">I segreti di Luisa per Lasagne con Ragù vegetale..</span>
+            </a>
+
+            <!-- RICETTA 2 -->
+            <a href="ricetta-ragu.html" class="ricetta-item">
+                <span class="ricetta-titolo">Il Nostro Ragù di Verdrure</span>
+                <span class="ricetta-descrizione">Una cottura lenta e ingredienti scelti per un sapore d'altri
+                    tempi.</span>
+            </a>
+
+            <!-- RICETTA 3 -->
+            <a href="ricetta-scaloppine.html" class="ricetta-item">
+                <span class="ricetta-titolo">Scaloppine ai Funghi</span>
+                <span class="ricetta-descrizione">Un secondo piatto veloce, cremoso e profumato, pronto in 15
+                    minuti.</span>
+            </a>
+
+            <!-- RICETTA 4 -->
+            <a href="ricetta-Insalata.html" class="ricetta-item">
+                <span class="ricetta-titolo">Insalata Ricca d'Estate</span>
+                <span class="ricetta-descrizione">Fresca, sfiziosa e leggera, con il nostro tocco speciale.</span>
+            </a>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>

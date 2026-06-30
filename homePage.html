@@ -18,22 +18,52 @@
         <div class="menu-container">
             <button class="btn-menu active" onclick="window.location.href='homePage.html'">Home</button>
             <button class="btn-menu" onclick="window.location.href='index.html'">Orari</button>
-            <button class="btn-menu" onclick="window.location.href='storia.html'">Chi Siamo</button>
-            <button class="btn-menu" onclick="window.location.href='doveSiamo.html'">Dove Siamo</button>
+            <button class="btn-menu" style="white-space: nowrap;" onclick="window.location.href='storia.html'">Chi Siamo</button>
+            <button class="btn-menu" style="white-space: nowrap;" onclick="window.location.href='doveSiamo.html'">Dove Siamo</button>
         </div>
     </nav>
 
-    <center>
-        <div class="homeText">
-            <br>
-            <h1>Sito in manutenzione<br>Possibili disagi Scusate</h1>
-            <canvas id="canvas1" width="350" height="400">
-                Il browser in uso non supporta il canvas
-            </canvas>
-        </div>
-    </center>
+    <div class="orari-card">
 
-    <script type="text/javascript" src="js/Js_Cerchio.js"></script>
+        <div class="logo">
+            <img src="assets/immagini/logo_piccolo.png">
+        </div>
+
+        <div class="status-banner" style="background: rgba(15, 6, 70, 0.95) !important;">
+            <div class="status-text" style="font-size: 18px;">BENVENUTI</div>
+        </div>
+
+        <div class="timetable" style="padding: 25px 20px; text-align: center;">
+
+            <h1
+                style="color: #0f0646; font-size: 22px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 12px;">
+                Il Nostro Mondo
+            </h1>
+
+            <p style="font-style: italic; color: #333333; font-size: 15px; line-height: 1.6; margin-bottom: 25px;">
+                "Passione, cura e tradizione<br>
+                al vostro servizio ogni giorno."
+            </p>
+
+            <div style="width: 50px; height: 2px; background-color: #0f0646; margin: 0 auto 25px auto; opacity: 0.2;">
+            </div>
+
+            <div style="display: flex; flex-direction: column; gap: 14px; max-width: 260px; margin: 0 auto;">
+
+                <button class="btn-home-esclusivo" onclick="window.location.href='prodotti.html'">
+                    I Nostri Prodotti
+                </button>
+
+                <button class="btn-home-esclusivo" onclick="window.location.href='ricette.html'">
+                    Le Nostre Ricette
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
 </body>
 
 </html>
