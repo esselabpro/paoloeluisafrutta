@@ -1,0 +1,382 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+body {
+    background-image: url("../assets/immagini/foto_sfondo.png");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 12px;
+    /* Margine ridotto per dare più spazio su schermi piccoli */
+}
+
+button {
+    background: rgba(99, 242, 99, 0.85);
+    /* Leggermente più visibile rispetto allo sfondo */
+    padding: 10px 22px;
+    /* Più cicciotto e facile da premere col dito */
+    color: #0f0646;
+    font-weight: 700;
+    font-family: 'Segoe UI', Roboto, sans-serif;
+    /* Corretto: ora usa i font di sistema puliti */
+    font-size: 16px;
+    border: 3px solid #0f0646;
+    border-radius: 8px;
+    /* Angoli leggermente più arrotondati */
+    cursor: pointer;
+    /* Fa apparire la manina col dito */
+    transition: transform 0.2s ease;
+    /* Effetto movimento quando viene premuto */
+}
+
+button:active {
+    transform: scale(0.95);
+    /* Si schiaccia leggermente quando ci fai clic sopra */
+}
+
+.homeText {
+    width: 100%;
+    max-width: 360px;
+    /* Più stretta per i cellulari */
+    background: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border-radius: 20px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    overflow: hidden;
+}
+
+.logo {
+    width: 100%;
+    max-width: 360px;
+    /* Mantiene la stessa larghezza della card sotto */
+    margin: 0 auto 15px auto;
+    /* Centra il contenitore e dà un po' di spazio (15px) verso il basso */
+    text-align: center;
+    /* Sostituisce il vecchio tag <center> dell'HTML */
+}
+
+.logo img {
+    max-width: 100% !important;
+    /* Forza il telefono a non far uscire l'immagine dal box */
+    height: auto !important;
+    /* Forza le proporzioni corrette */
+    display: block;
+    margin: 0 auto;
+    border-radius: 12px;
+}
+
+/* CARD AGGIUSTATA PER SCHERMI STRETTI */
+.orari-card {
+    width: 100%;
+    max-width: 360px;
+    /* Più stretta per i cellulari */
+    background: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border-radius: 20px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    overflow: hidden;
+}
+
+/* BANNER COMPATTO */
+.status-banner {
+    padding: 20px 15px;
+    text-align: center;
+    color: white;
+    transition: background 0.4s ease;
+}
+
+.status-banner.aperto {
+    background: rgba(42, 157, 143, 0.95);
+}
+
+.status-banner.chiuso {
+    background: rgba(230, 57, 70, 0.95);
+}
+
+.status-text {
+    font-size: 20px;
+    /* Leggermente più piccolo per non tagliare il testo */
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.countdown-text {
+    font-size: 14px;
+    margin-top: 4px;
+    opacity: 0.95;
+    font-weight: 500;
+}
+
+/* NUOVA STRUTTURA VERTICALE PER I GIORNI */
+.timetable {
+    padding: 12px 10px;
+}
+
+.day-block {
+    display: flex;
+    flex-direction: column;
+    /* FORZA IL TESTO AD ANDARE IN VERTICALE: giorno sopra, orari sotto */
+    padding: 10px 12px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+    border-radius: 8px;
+    margin-bottom: 4px;
+}
+
+.day-block:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+}
+
+.day-name {
+    font-weight: 800;
+    text-transform: uppercase;
+    font-size: 13px;
+    color: #111;
+    margin-bottom: 4px;
+    /* Spazio tra il giorno e l'orario */
+}
+
+.hours-container {
+    display: flex;
+    justify-content: space-between;
+    /* Spinge mattina a sinistra e pomeriggio a destra */
+    font-size: 14px;
+    font-weight: 700;
+    color: #222;
+}
+
+.hours-block {
+    background: rgba(255, 255, 255, 0.4);
+    /* Un piccolo sfondo per rendere l'orario più leggibile */
+    padding: 3px 8px;
+    border-radius: 5px;
+}
+
+.closed-text {
+    color: #555;
+    font-weight: 600;
+    font-style: italic;
+}
+
+/* EVIDENZIAZIONE DI OGGI */
+.day-block.today-highlight {
+    background: rgba(42, 157, 143, 0.18);
+    border-left: 5px solid #2a9d8f;
+}
+
+.day-block.today-highlight .day-name {
+    color: #1b6b60;
+}
+
+/* ========================================== */
+/* PAGINA DELLA STORIA              */
+/* ========================================== */
+
+/* Nuova card per la storia: flessibile su PC e perfetta su telefono */
+.storia-card {
+    width: 100%;
+    max-width: 750px;
+    /* Più ampia sul PC per leggere bene il testo lungo */
+    background: rgba(255, 255, 255, 0.6);
+    /* Mantiene la trasparenza coerente del tuo sito */
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border-radius: 20px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    overflow: hidden;
+    margin: 20px auto;
+    /* Centra la card nella pagina */
+}
+
+/* Il contenitore che JavaScript userà per inserire il testo */
+#testo-storia {
+    padding: 25px 30px;
+    /* Più spazio interno su PC */
+    color: #222222;
+    line-height: 1.7;
+    /* Ottima interlinea per non affaticare la lettura */
+}
+
+/* Titolo Principale (La nostra storia) */
+.titolo-storia {
+    text-align: center;
+    font-size: 28px;
+    font-weight: 800;
+    margin-top: 10px;
+    margin-bottom: 6px;
+    color: #111111;
+    text-transform: uppercase;
+    /* Lo rende in maiuscolo stile i tuoi banner */
+    letter-spacing: 0.5px;
+}
+
+/* Sottotitolo (Due percorsi, un unico sguardo) */
+.sottotitolo-storia {
+    text-align: center;
+    font-size: 18px;
+    font-weight: 600;
+    font-style: italic;
+    margin-bottom: 35px;
+    color: #444444;
+}
+
+/* I titoli dei paragrafi in BLU (Paolo, Luisa, Insieme) */
+.titolo-paragrafo {
+    color: #0f0646;
+    /* Ho usato lo stesso blu scuro sceltissimo del tuo bottone! */
+    font-size: 20px;
+    font-weight: 800;
+    margin-top: 35px;
+    margin-bottom: 12px;
+    border-bottom: 2px solid rgba(15, 6, 70, 0.1);
+    /* Sottile linea decorativa sotto il titolo blu */
+    padding-bottom: 4px;
+}
+
+/* Testo normale dei paragrafi */
+.testo-normale {
+    font-size: 16px;
+    margin-bottom: 18px;
+    text-align: justify;
+    /* Testo allineato a destra e sinistra come nei libri */
+}
+
+/* La firma finale in grassetto */
+.firma-storia {
+    margin-top: 40px;
+    font-size: 17px;
+    text-align: right;
+    /* Sposta la firma a destra in modo elegante */
+    color: #111111;
+}
+
+/* Stilizziamo i bottoni del menu usando le tue preferenze grafiche */
+.btn-menu {
+    background: rgba(255, 255, 255, 0.6) !important;
+    color: #0f0646 !important;
+    border: 2px solid #0f0646 !important;
+    padding: 8px 16px !important;
+    font-size: 14px !important;
+    border-radius: 6px !important;
+    transition: all 0.2s ease;
+    flex: 1;
+    /* TRUCCO: Dice ai bottoni di spartirsi lo spazio in parti uguali! */
+    text-align: center;
+}
+
+/* Evidenzia il bottone della pagina in cui ci si trova */
+.btn-menu.active {
+    background: rgba(99, 242, 99, 0.95) !important;
+    font-weight: 800;
+}
+
+.btn-menu:hover {
+    transform: translateY(-2px);
+}
+
+/* AGGIUSTAMENTO ADATTABILE (RESPONSIVE) PER IL CELLULARE */
+@media (max-width: 768px) {
+    #testo-storia {
+        padding: 15px 18px;
+    }
+
+    .titolo-storia {
+        font-size: 22px;
+    }
+
+    .titolo-paragrafo {
+        font-size: 18px;
+    }
+
+    .testo-normale {
+        text-align: left;
+    }
+
+    /* Riduciamo leggermente il carattere e lo spazio dei bottoni solo sui telefoni */
+    .btn-menu {
+        padding: 6px 8px !important;
+        font-size: 13px !important;
+    }
+
+    .menu-container {
+        gap: 6px;
+        /* Avvicina leggermente i bottoni sul cellulare */
+    }
+}
+
+/* ========================================== */
+/* STRUTTURA BARRA DEI MENU (NAVBAR)          */
+/* ========================================== */
+
+/* Modifica al body quando visualizza le pagine con testo lungo (storia) per non farle volare al centro */
+body {
+    flex-direction: column !important;
+    /* Dispone menu e card in verticale, uno sotto l'altro */
+    justify-content: flex-start !important;
+    /* Allinea tutto partendo dall'alto della pagina */
+    padding-top: 20px;
+}
+
+.navbar-principale {
+    width: 100%;
+    max-width: 750px;
+    /* Ha la stessa larghezza massima della card della storia */
+    margin: 0 auto 10px auto;
+    /* Centra la barra e dà spazio verso la card sotto */
+    padding: 0 10px;
+}
+
+.menu-container {
+    display: flex;
+    gap: 10px;
+    /* Spazio tra un bottone del menu e l'altro */
+    justify-content: center;
+    /* Centra i bottoni nella barra */
+    background: rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    padding: 8px;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+/* Stilizziamo i bottoni del menu usando le tue preferenze grafiche */
+.btn-menu {
+    background: rgba(255, 255, 255, 0.6) !important;
+    color: #0f0646 !important;
+    border: 2px solid #0f0646 !important;
+    padding: 8px 16px !important;
+    font-size: 14px !important;
+    border-radius: 6px !important;
+    transition: all 0.2s ease;
+}
+
+/* Evidenzia il bottone della pagina in cui ci si trova (es: Chi Siamo) */
+.btn-menu.active {
+    background: rgba(99, 242, 99, 0.95) !important;
+    /* Sfrutta il tuo bellissimo verde acceso */
+    font-weight: 800;
+}
+
+.btn-menu:hover {
+    transform: translateY(-2px);
+    /* Un piccolo effetto di sollevamento quando ci passi sopra col mouse */
+}
+
+/* ========================================== */
